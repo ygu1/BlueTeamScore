@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5AD951481D36E4760030BABA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD951471D36E4760030BABA /* AppDelegate.swift */; };
+		5AD9514A1D36E4760030BABA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD951491D36E4760030BABA /* ViewController.swift */; };
+		5AD9514D1D36E4760030BABA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD9514B1D36E4760030BABA /* Main.storyboard */; };
+		5AD9514F1D36E4760030BABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AD9514E1D36E4760030BABA /* Assets.xcassets */; };
+		5AD951521D36E4760030BABA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD951501D36E4760030BABA /* LaunchScreen.storyboard */; };
+		5AD9515D1D36E4760030BABA /* BlueTeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD9515C1D36E4760030BABA /* BlueTeamTests.swift */; };
+		5AD951681D36E4760030BABA /* BlueTeamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD951671D36E4760030BABA /* BlueTeamUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5AD951591D36E4760030BABA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AD9513C1D36E4760030BABA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AD951431D36E4760030BABA;
+			remoteInfo = BlueTeam;
+		};
+		5AD951641D36E4760030BABA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AD9513C1D36E4760030BABA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AD951431D36E4760030BABA;
+			remoteInfo = BlueTeam;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5AD951441D36E4760030BABA /* BlueTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AD951471D36E4760030BABA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5AD951491D36E4760030BABA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5AD9514C1D36E4760030BABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5AD9514E1D36E4760030BABA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5AD951511D36E4760030BABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5AD951531D36E4760030BABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AD951581D36E4760030BABA /* BlueTeamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlueTeamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AD9515C1D36E4760030BABA /* BlueTeamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueTeamTests.swift; sourceTree = "<group>"; };
+		5AD9515E1D36E4760030BABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AD951631D36E4760030BABA /* BlueTeamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlueTeamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AD951671D36E4760030BABA /* BlueTeamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueTeamUITests.swift; sourceTree = "<group>"; };
+		5AD951691D36E4760030BABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5AD951411D36E4760030BABA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AD951551D36E4760030BABA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AD951601D36E4760030BABA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5AD9513B1D36E4760030BABA = {
+			isa = PBXGroup;
+			children = (
+				5AD951461D36E4760030BABA /* BlueTeam */,
+				5AD9515B1D36E4760030BABA /* BlueTeamTests */,
+				5AD951661D36E4760030BABA /* BlueTeamUITests */,
+				5AD951451D36E4760030BABA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5AD951451D36E4760030BABA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5AD951441D36E4760030BABA /* BlueTeam.app */,
+				5AD951581D36E4760030BABA /* BlueTeamTests.xctest */,
+				5AD951631D36E4760030BABA /* BlueTeamUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5AD951461D36E4760030BABA /* BlueTeam */ = {
+			isa = PBXGroup;
+			children = (
+				5AD951471D36E4760030BABA /* AppDelegate.swift */,
+				5AD951491D36E4760030BABA /* ViewController.swift */,
+				5AD9514B1D36E4760030BABA /* Main.storyboard */,
+				5AD9514E1D36E4760030BABA /* Assets.xcassets */,
+				5AD951501D36E4760030BABA /* LaunchScreen.storyboard */,
+				5AD951531D36E4760030BABA /* Info.plist */,
+			);
+			path = BlueTeam;
+			sourceTree = "<group>";
+		};
+		5AD9515B1D36E4760030BABA /* BlueTeamTests */ = {
+			isa = PBXGroup;
+			children = (
+				5AD9515C1D36E4760030BABA /* BlueTeamTests.swift */,
+				5AD9515E1D36E4760030BABA /* Info.plist */,
+			);
+			path = BlueTeamTests;
+			sourceTree = "<group>";
+		};
+		5AD951661D36E4760030BABA /* BlueTeamUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5AD951671D36E4760030BABA /* BlueTeamUITests.swift */,
+				5AD951691D36E4760030BABA /* Info.plist */,
+			);
+			path = BlueTeamUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5AD951431D36E4760030BABA /* BlueTeam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AD9516C1D36E4760030BABA /* Build configuration list for PBXNativeTarget "BlueTeam" */;
+			buildPhases = (
+				5AD951401D36E4760030BABA /* Sources */,
+				5AD951411D36E4760030BABA /* Frameworks */,
+				5AD951421D36E4760030BABA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlueTeam;
+			productName = BlueTeam;
+			productReference = 5AD951441D36E4760030BABA /* BlueTeam.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5AD951571D36E4760030BABA /* BlueTeamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AD9516F1D36E4760030BABA /* Build configuration list for PBXNativeTarget "BlueTeamTests" */;
+			buildPhases = (
+				5AD951541D36E4760030BABA /* Sources */,
+				5AD951551D36E4760030BABA /* Frameworks */,
+				5AD951561D36E4760030BABA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AD9515A1D36E4760030BABA /* PBXTargetDependency */,
+			);
+			name = BlueTeamTests;
+			productName = BlueTeamTests;
+			productReference = 5AD951581D36E4760030BABA /* BlueTeamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5AD951621D36E4760030BABA /* BlueTeamUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AD951721D36E4760030BABA /* Build configuration list for PBXNativeTarget "BlueTeamUITests" */;
+			buildPhases = (
+				5AD9515F1D36E4760030BABA /* Sources */,
+				5AD951601D36E4760030BABA /* Frameworks */,
+				5AD951611D36E4760030BABA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AD951651D36E4760030BABA /* PBXTargetDependency */,
+			);
+			name = BlueTeamUITests;
+			productName = BlueTeamUITests;
+			productReference = 5AD951631D36E4760030BABA /* BlueTeamUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5AD9513C1D36E4760030BABA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Yanliang Gu";
+				TargetAttributes = {
+					5AD951431D36E4760030BABA = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					5AD951571D36E4760030BABA = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 5AD951431D36E4760030BABA;
+					};
+					5AD951621D36E4760030BABA = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 5AD951431D36E4760030BABA;
+					};
+				};
+			};
+			buildConfigurationList = 5AD9513F1D36E4760030BABA /* Build configuration list for PBXProject "BlueTeam" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5AD9513B1D36E4760030BABA;
+			productRefGroup = 5AD951451D36E4760030BABA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5AD951431D36E4760030BABA /* BlueTeam */,
+				5AD951571D36E4760030BABA /* BlueTeamTests */,
+				5AD951621D36E4760030BABA /* BlueTeamUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5AD951421D36E4760030BABA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AD951521D36E4760030BABA /* LaunchScreen.storyboard in Resources */,
+				5AD9514F1D36E4760030BABA /* Assets.xcassets in Resources */,
+				5AD9514D1D36E4760030BABA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AD951561D36E4760030BABA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AD951611D36E4760030BABA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5AD951401D36E4760030BABA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AD9514A1D36E4760030BABA /* ViewController.swift in Sources */,
+				5AD951481D36E4760030BABA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AD951541D36E4760030BABA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AD9515D1D36E4760030BABA /* BlueTeamTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AD9515F1D36E4760030BABA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AD951681D36E4760030BABA /* BlueTeamUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5AD9515A1D36E4760030BABA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AD951431D36E4760030BABA /* BlueTeam */;
+			targetProxy = 5AD951591D36E4760030BABA /* PBXContainerItemProxy */;
+		};
+		5AD951651D36E4760030BABA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AD951431D36E4760030BABA /* BlueTeam */;
+			targetProxy = 5AD951641D36E4760030BABA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5AD9514B1D36E4760030BABA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5AD9514C1D36E4760030BABA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5AD951501D36E4760030BABA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5AD951511D36E4760030BABA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5AD9516A1D36E4760030BABA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5AD9516B1D36E4760030BABA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5AD9516D1D36E4760030BABA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BlueTeam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ibm.BlueTeam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5AD9516E1D36E4760030BABA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BlueTeam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ibm.BlueTeam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5AD951701D36E4760030BABA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BlueTeamTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ibm.BlueTeamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlueTeam.app/BlueTeam";
+			};
+			name = Debug;
+		};
+		5AD951711D36E4760030BABA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BlueTeamTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ibm.BlueTeamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlueTeam.app/BlueTeam";
+			};
+			name = Release;
+		};
+		5AD951731D36E4760030BABA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BlueTeamUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ibm.BlueTeamUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BlueTeam;
+			};
+			name = Debug;
+		};
+		5AD951741D36E4760030BABA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BlueTeamUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ibm.BlueTeamUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BlueTeam;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5AD9513F1D36E4760030BABA /* Build configuration list for PBXProject "BlueTeam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AD9516A1D36E4760030BABA /* Debug */,
+				5AD9516B1D36E4760030BABA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AD9516C1D36E4760030BABA /* Build configuration list for PBXNativeTarget "BlueTeam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AD9516D1D36E4760030BABA /* Debug */,
+				5AD9516E1D36E4760030BABA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5AD9516F1D36E4760030BABA /* Build configuration list for PBXNativeTarget "BlueTeamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AD951701D36E4760030BABA /* Debug */,
+				5AD951711D36E4760030BABA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5AD951721D36E4760030BABA /* Build configuration list for PBXNativeTarget "BlueTeamUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AD951731D36E4760030BABA /* Debug */,
+				5AD951741D36E4760030BABA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5AD9513C1D36E4760030BABA /* Project object */;
+}
