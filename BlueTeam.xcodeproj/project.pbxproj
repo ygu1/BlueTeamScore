@@ -14,6 +14,9 @@
 		5AD951521D36E4760030BABA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD951501D36E4760030BABA /* LaunchScreen.storyboard */; };
 		5AD9515D1D36E4760030BABA /* BlueTeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD9515C1D36E4760030BABA /* BlueTeamTests.swift */; };
 		5AD951681D36E4760030BABA /* BlueTeamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD951671D36E4760030BABA /* BlueTeamUITests.swift */; };
+		5AD951771D371AD80030BABA /* TeamTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD951751D371AD80030BABA /* TeamTableCell.swift */; };
+		5AD951781D371AD80030BABA /* TeamTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD951761D371AD80030BABA /* TeamTableCell.xib */; };
+		5AD9517A1D37203E0030BABA /* SiteList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AD951791D37203E0030BABA /* SiteList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		5AD951631D36E4760030BABA /* BlueTeamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlueTeamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD951671D36E4760030BABA /* BlueTeamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueTeamUITests.swift; sourceTree = "<group>"; };
 		5AD951691D36E4760030BABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AD951751D371AD80030BABA /* TeamTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTableCell.swift; sourceTree = "<group>"; };
+		5AD951761D371AD80030BABA /* TeamTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamTableCell.xib; sourceTree = "<group>"; };
+		5AD951791D37203E0030BABA /* SiteList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SiteList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 				5AD9514E1D36E4760030BABA /* Assets.xcassets */,
 				5AD951501D36E4760030BABA /* LaunchScreen.storyboard */,
 				5AD951531D36E4760030BABA /* Info.plist */,
+				5AD951751D371AD80030BABA /* TeamTableCell.swift */,
+				5AD951761D371AD80030BABA /* TeamTableCell.xib */,
+				5AD951791D37203E0030BABA /* SiteList.plist */,
 			);
 			path = BlueTeam;
 			sourceTree = "<group>";
@@ -193,6 +202,7 @@
 				TargetAttributes = {
 					5AD951431D36E4760030BABA = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = F5THR8T23S;
 					};
 					5AD951571D36E4760030BABA = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -229,7 +239,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AD9517A1D37203E0030BABA /* SiteList.plist in Resources */,
 				5AD951521D36E4760030BABA /* LaunchScreen.storyboard in Resources */,
+				5AD951781D371AD80030BABA /* TeamTableCell.xib in Resources */,
 				5AD9514F1D36E4760030BABA /* Assets.xcassets in Resources */,
 				5AD9514D1D36E4760030BABA /* Main.storyboard in Resources */,
 			);
@@ -257,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AD9514A1D36E4760030BABA /* ViewController.swift in Sources */,
+				5AD951771D371AD80030BABA /* TeamTableCell.swift in Sources */,
 				5AD951481D36E4760030BABA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,10 +414,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BlueTeam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ibm.BlueTeam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -412,10 +428,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BlueTeam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ibm.BlueTeam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
