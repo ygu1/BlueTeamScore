@@ -18,6 +18,7 @@ class TeamTableCell: UITableViewCell {
         // Initialization code
         self.layer.borderColor = UIColor.grayColor().CGColor
         self.layer.borderWidth = 0.5
+        self.backgroundColor = UIColor(white: 1.0, alpha: 0)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

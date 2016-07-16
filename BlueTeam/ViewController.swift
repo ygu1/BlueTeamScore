@@ -15,16 +15,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var calculateBtn: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var mainSiteBtn: UIButton!
-    @IBOutlet weak var mainSiteLabel: UILabel!
+    @IBOutlet weak var locationView: UIView!
+    @IBOutlet weak var cityLabel: UITextField!
+    @IBOutlet weak var stateLabel: UITextField!
+    @IBOutlet weak var countryLabel: UITextField!
+    @IBOutlet weak var addLocationBtn: UIButton!
     
     private let teamTableCellReuseIdentifier = "teamTableCell"
     private let locationTableCellReuseIdentifier = "locationTableCell"
     private let LOCATION_PENALTY = 0.5
     private let TIME_ZONE_PENALTY = 0.75
-    private let TIME_ZONE_DIFF = 12.0
+    private let TIME_ZONE_DIFF = 25.0
+    private let MAP_API_URL = "http://btsmapapi.mybluemix.net/locationToTimezone/"
     
     var teamArray = NSMutableArray()
-    var siteDict: NSDictionary!
+    var siteDict: NSMutableDictionary!
     var siteDictKeys: Array<String>!
     var addMainSite: Bool = false
     
@@ -37,10 +42,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         scoreLabel.layer.borderWidth = 2.0
         scoreLabel.layer.cornerRadius = 8.0
         self.view.bringSubviewToFront(mainSiteBtn)
-        mainSiteLabel.layer.borderWidth = 0.5
-        mainSiteLabel.layer.borderColor = UIColor.grayColor().CGColor
-        siteDict = readSiteList()
-        siteDictKeys = (siteDict.allKeys as! Array<String>).sort{$0 < $1}
+        mainSiteBtn.layer.borderWidth = 0.5
+        mainSiteBtn.layer.borderColor = UIColor.grayColor().CGColor
+        
+        locationView.layer.borderColor = UIColor.grayColor().CGColor
+        locationView.layer.borderWidth = 1.0
+        locationView.layer.cornerRadius = 5.0
+        self.view.bringSubviewToFront(locationView)
+        locationView.hidden = true
+        
+        siteDict = NSMutableDictionary()
+        //siteDictKeys = (siteDict.allKeys as! Array<String>).sort{$0 < $1}
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,7 +78,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         teamTable.registerNib(UINib(nibName: "TeamTableCell", bundle: nil), forCellReuseIdentifier: teamTableCellReuseIdentifier)
         teamTable.delegate = self
         teamTable.dataSource = self
-        //teamTable.backgroundColor = UIColor.grayColor()
+        teamTable.backgroundColor = UIColor(white: 1, alpha: 0)
         //teamTable.allowsSelection = false
     }
     
@@ -78,9 +90,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         locationTable.dataSource = self
         self.view.bringSubviewToFront(locationTable)
         locationTable.layer.borderWidth = 1.0
-        locationTable.layer.borderColor = UIColor.blackColor().CGColor
+        locationTable.layer.borderColor = UIColor.grayColor().CGColor
         locationTable.layer.cornerRadius = 5.0
         locationTable.hidden = true
+        locationTable.backgroundColor = UIColor(white: 1, alpha: 0)
         //locationTable.allowsSelection = false
     }
     
@@ -98,7 +111,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if tableView == teamTable {
             return teamArray.count + 1
         } else {
-            return siteDictKeys.count
+            return 0
         }
     }
     
@@ -112,7 +125,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell.textField.text = ""
 
             } else {
-                let time = (siteDict.valueForKey(teamArray[indexPath.row] as! String)?.integerValue)! - 12
+                //cell.textField.text = teamArray[indexPath.row] as! String
+                let time = (siteDict.valueForKey(teamArray[indexPath.row] as! String)?.integerValue)!
                 var middleString = " UTC"
                 if time >= 0 {
                     middleString = " UTC+"
@@ -136,6 +150,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(locationTableCellReuseIdentifier, forIndexPath: indexPath)
             cell.textLabel?.text = siteDictKeys[indexPath.row]
             cell.selectionStyle = UITableViewCellSelectionStyle.None
+            cell.backgroundColor = UIColor(white: 1, alpha: 0)
             return cell
         }
 
@@ -146,7 +161,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if tableView == locationTable {
             if addMainSite {
 //                mainSiteBtn.setTitle(siteDictKeys[indexPath.row], forState: .Normal)
-                mainSiteLabel.text = siteDictKeys[indexPath.row]
+                mainSiteBtn.setTitle(siteDictKeys[indexPath.row], forState: .Normal)
                 locationTable.hidden = true
             } else {
                 teamArray.addObject(siteDictKeys[indexPath.row])
@@ -169,17 +184,63 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         Click the add button in the last cell will add a new cell
      */
     func addBtnClicked(sender:UIButton) {
-        locationTable.hidden = false
+        //locationTable.hidden = false
+        locationView.hidden = false
         addMainSite = false
     }
 
     @IBAction func chooseMainSite(sender: UIButton) {
-        locationTable.hidden = false
+        //locationTable.hidden = false
+        locationView.hidden = false
         addMainSite = true
     }
     
+    @IBAction func addLocation(sender: UIButton) {
+       self.mapApiCall(cityLabel.text!, state: stateLabel.text!, counrty: countryLabel.text!)
+        //print(timeDict)
+        //let time = timeDict.valueForKey("Timezone") as! String
+        cityLabel.text = ""
+        stateLabel.text = ""
+        countryLabel.text = ""
+        //teamArray.addObject(locationData+time)
+        locationView.hidden = true
+        teamTable.reloadData()
+        view.endEditing(true)
+    }
+    
+    func mapApiCall(city: String, state: String, counrty: String) -> () {
+        // check state and country
+        let url : NSURL = NSURL(string: MAP_API_URL+city+"+"+state+"+"+counrty)!
+        //var session = NSURLSession.sharedSession()
+        let request = NSMutableURLRequest(URL: url)
+        //let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+        //session = NSURLSession(configuration: config)
+        request.HTTPMethod = "GET"
+        var timeData = NSMutableDictionary()
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {(response, data, error) in
+            //println(NSString(data: data, encoding: NSUTF8StringEncoding))
+            //var jsonError: NSError?
+            timeData = (try! NSJSONSerialization.JSONObjectWithData(data!, options: [])) as! NSMutableDictionary
+            print("\(timeData)")
+            let location = city+"/"+state+"/"+counrty
+            let timezone = timeData.valueForKey("Timezone") as! String
+            //print((timezone as NSString).substringFromIndex(3))
+            let time: String = (timezone as NSString).substringFromIndex(3) as String
+            print(time)
+            if self.addMainSite {
+                self.mainSiteBtn.setTitle(location, forState: .Normal)
+            }
+            else {
+                self.siteDict.setValue(time, forKey: location)
+                self.teamArray.addObject(location)
+                self.teamTable.reloadData()
+            }
+        }
+    }
+    
+    
     @IBAction func calculateScore(sender: AnyObject) {
-        if mainSiteLabel.text != "Choose Main Site" {
+        if mainSiteBtn.currentTitle != "Choose Main Site" {
             var diffLocation: NSMutableDictionary = NSMutableDictionary()
 //            var maxN = 0
 //            var maxL = ""
@@ -202,7 +263,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let diffLocationKeys = diffLocation.allKeys
             //print(diffLocation)
             if diffLocationKeys.count != 0 {
-                let standardTime = siteDict.valueForKey((mainSiteLabel.text)!)!.integerValue
+                let standardTime = siteDict.valueForKey((mainSiteBtn?.currentTitle)!)!.integerValue
                 var totalMembers = 0.0
                 var sumLocations = 0.0
                 //print(standardTime)
